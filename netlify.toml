@@ -1,0 +1,6 @@
+# Netlify tự nhận Next.js và dùng OpenNext — chỉ cần set build command
+[build]
+  command = "npm run build"
+  environment = { NODE_VERSION = "18" }
+
+# Publish do Netlify Next.js runtime tự xử lý, không cần set publish

@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-rose: #e11d48;
+  --color-blush: #fce7f3;
+  --color-deep: #9f1239;
+  --color-cream: #fff1f2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-stone-800 bg-valentine-cream;
+}
+
+/* Ảnh gallery: màu gốc, giữ transition mượt */
+.polaroid-img {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Section spacing */
+.section {
+  @apply min-h-screen w-full flex flex-col items-center justify-center px-4 py-16 md:py-24;
+}
+
+/* Intro text: start invisible, animate in */
+.intro-line {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Trái tim nhẹ bay */
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-80vh) rotate(20deg);
+    opacity: 0;
+  }
+}
