@@ -33,13 +33,12 @@ Mở [http://localhost:3000](http://localhost:3000).
 
 ## Deploy lên Netlify
 
-1. **Đẩy code lên GitHub** (nếu chưa có repo):
+1. **Đẩy code lên GitHub**: Repo đã được `git init`, commit, branch `main`. Chỉ cần:
+   - Tạo repo mới trên GitHub: [github.com/new](https://github.com/new) → đặt tên (vd: `valantine`) → **Create repository** (không tick README).
+   - Chạy (thay `<username>` bằng GitHub username của bạn):
    ```bash
-   git init
-   git add .
-   git commit -m "Valentine site"
-   git branch -M main
-   git remote add origin https://github.com/<username>/<repo>.git
+   git remote remove origin
+   git remote add origin https://github.com/<username>/valantine.git
    git push -u origin main
    ```
    Lưu ý: thư mục `public/image/` có nhiều ảnh — nếu repo quá nặng có thể dùng [Git LFS](https://git-lfs.com/) hoặc bỏ qua ảnh và dùng ảnh từ CDN sau.

@@ -4,6 +4,8 @@ import WishesSection from "@/components/WishesSection";
 import NavMini from "@/components/NavMini";
 import Footer from "@/components/Footer";
 import MusicToggle from "@/components/MusicToggle";
+import ShareButton from "@/components/ShareButton";
+import WishesCelebration from "@/components/WishesCelebration";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <WishesSection />
       <Footer />
       <MusicToggle />
+      <ShareButton />
+      <WishesCelebration />
     </main>
   );
 }
